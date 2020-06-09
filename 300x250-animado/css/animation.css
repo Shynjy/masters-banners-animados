@@ -1,0 +1,218 @@
+:root {
+    /* tempo de escala */
+    --timeScale: 5s;
+}
+
+
+/* transitions */
+
+.transition-1 {
+    -webkit-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.transition-2 {
+    -webkit-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.transition-3 {
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.transition-4 {
+    -webkit-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+.transition-5 {
+    -webkit-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.transition-off {
+    -webkit-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+}
+
+
+/* functions */
+
+.right-1 {
+    -webkit-transform: translate(var(--width), 0px) rotate(0.01deg);
+    -moz-transform: translate(var(--width), 0px) rotate(0.01deg);
+    -ms-transform: translate(var(--width), 0px) rotate(0.01deg);
+    -o-transform: translate(var(--width), 0px) rotate(0.01deg);
+    transform: translate(var(--width), 0px) rotate(0.01deg);
+}
+
+.left-1 {
+    -webkit-transform: translate(var(--left), 0px) rotate(0.01deg);
+    -moz-transform: translate(var(--left), 0px) rotate(0.01deg);
+    -ms-transform: translate(var(--left), 0px) rotate(0.01deg);
+    -o-transform: translate(var(--left), 0px) rotate(0.01deg);
+    transform: translate(var(--left), 0px) rotate(0.01deg);
+}
+
+.up-1 {
+    -webkit-transform: translate(0px, var(--up)) rotate(0.01deg) !important;
+    -moz-transform: translate(0px, var(--up)) rotate(0.01deg) !important;
+    -ms-transform: translate(0px, var(--up)) rotate(0.01deg) !important;
+    -o-transform: translate(0px, var(--up)) rotate(0.01deg) !important;
+    transform: translate(0px, var(--up)) rotate(0.01deg) !important;
+}
+
+
+/* animations */
+
+.animClass {
+    transform: translate3d(0, 0, 0);
+    /* Force Hardware Acceleration */
+}
+
+
+/* Scale */
+
+.scale-1 {
+    animation-name: scale-1;
+    animation-iteration-count: 1;
+    animation-duration: var(--timeScale);
+    animation-fill-mode: forwards;
+    -webkit-animation-name: scale-1;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: var(--timeScale);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: scale-1;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-duration: var(--timeScale);
+    -moz-animation-fill-mode: forwards;
+}
+
+@keyframes scale-1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@-webkit-keyframes scale-1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@-moz-keyframes scale-1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes anim1 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 161px;
+    }
+}
+
+@-webkit-keyframes anim1 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 161px;
+    }
+}
+
+@-moz-keyframes anim1 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 161px;
+    }
+}
+
+@keyframes anima-left {
+    0% {
+        left: -10px;
+    }
+    /* o frame inicial começa na posição 0 da imagem*/
+    40% {
+        left: -10px;
+    }
+    100% {
+        left: -55px;
+    }
+    /* o frame final termina no tamanho total da largura da imagem */
+}
+
+@-webkit-keyframes anima-left {
+    0% {
+        left: -10px;
+    }
+    40% {
+        left: -10px;
+    }
+    100% {
+        left: -55px;
+    }
+}
+
+@-moz-keyframes anima-smoke {
+    0% {
+        left: -10px;
+    }
+    40% {
+        left: -10px;
+    }
+    100% {
+        left: -55px;
+    }
+}
+
+@-ms-keyframes anima-smoke {
+    0% {
+        left: -10px;
+    }
+    40% {
+        left: -10px;
+    }
+    100% {
+        left: -55px;
+    }
+}
+
+@-o-keyframes anima-smoke {
+    0% {
+        left: -10px;
+    }
+    40% {
+        left: -10px;
+    }
+    100% {
+        left: -55px;
+    }
+}

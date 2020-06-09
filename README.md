@@ -11,6 +11,6 @@ Banner animado:
 Banner video:
 * 6s
 * fade de entrada
-* play automatico, após o termino do fade
+* play automático, após o termino do fade
 * btn replay
 * roda em todos os dispositivos 

@@ -151,6 +151,15 @@ img {
     background-size: var(--width) var(--height);
 }
 
+.default {
+    top: 0 !important;
+    left: 0 !important;
+    -ms-transform: scale(1) !important;
+    /* IE 9 */
+    transform: scale(1) !important;
+    /* Standard syntax */
+}
+
 a.click-through {
     cursor: pointer !important;
     position: absolute;

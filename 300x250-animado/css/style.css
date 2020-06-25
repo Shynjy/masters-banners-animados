@@ -131,6 +131,9 @@ img {
     top: 0;
     left: 0;
     -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
     /* IE 9 */
     transform: scale(1);
     /* Standard syntax */
@@ -158,6 +161,9 @@ img {
     /* IE 9 */
     transform: scale(1) !important;
     /* Standard syntax */
+    -ms-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    /* Force Hardware Acceleration */
 }
 
 a.click-through {

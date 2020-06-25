@@ -45,7 +45,7 @@ function allAnimations() {
         if (animCount == second(0)) {
             // Transition start
             copy1.setAttribute('class', 'left-1');
-            copy2.setAttribute('class', 'left-1');
+            copy2.setAttribute('class', 'txt-up');
             copy3.setAttribute('class', 'up-1');
             cta.setAttribute('class', 'transition-txt-scale')
             // Transition end
@@ -60,13 +60,13 @@ function allAnimations() {
             copy1.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {
             bg2.setAttribute('class', 'transition-2 fade-in scale-1');
-            bg1.setAttribute('class', 'transition-off fade-off scale-1');
-            copy2.setAttribute('class', 'transition-2 fade-in');
+            bg1.setAttribute('class', 'transition-6 fade-off scale-1');
+            copy2.setAttribute('class', 'transition-7 fade-in');
         } else if (animCount == second(2.25)) {
             copy2.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {
             bg3.setAttribute('class', 'transition-2 fade-in scale-1');
-            bg2.setAttribute('class', 'transition-off fade-off scale-1');
+            bg2.setAttribute('class', 'transition-6 fade-off scale-1');
             copy3.setAttribute('class', 'transition-1 fade-in');
             logo.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.5)) {

@@ -11,7 +11,8 @@ function allAnimations() {
 
         fade = document.getElementById('fade'),
 
-        logo = document.getElementById('logo'),
+        // logo = document.getElementById('logo'),
+        logo2 = document.getElementById('logo2'),
 
         bg1 = document.getElementById('bg1'),
         bg2 = document.getElementById('bg2'),
@@ -44,6 +45,7 @@ function allAnimations() {
 
         if (animCount == second(0)) {
             // Transition start
+            logo2.setAttribute('class', 'txt-mini');
             copy1.setAttribute('class', 'left-1');
             copy2.setAttribute('class', 'txt-up');
             copy3.setAttribute('class', 'up-1');
@@ -55,7 +57,7 @@ function allAnimations() {
             fade.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {
             copy1.setAttribute('class', 'transition-2 fade-in');
-            logo.setAttribute('class', 'transition-2 fade-in');
+            logo2.setAttribute('class', 'transition-txt fade-in');
         } else if (animCount == second(2.25)) {
             copy1.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {
@@ -68,7 +70,7 @@ function allAnimations() {
             bg3.setAttribute('class', 'transition-2 fade-in scale-1');
             bg2.setAttribute('class', 'transition-6 fade-off scale-1');
             copy3.setAttribute('class', 'transition-1 fade-in');
-            logo.setAttribute('class', 'transition-2 fade-out');
+            logo2.setAttribute('class', 'transition-1 fade-out');
         } else if (animCount == second(0.5)) {
             cta.setAttribute('class', 'transition-txt-in fade-in');
         } else if (animCount == second(0) + 4) {

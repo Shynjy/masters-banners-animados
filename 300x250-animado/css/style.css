@@ -74,7 +74,7 @@ img {
 }
 
 
-/* elements */
+/* elements canvas padrão */
 
 #logo,
 #copy1,
@@ -153,6 +153,20 @@ img {
     background: url(../images/bg3.jpg) 0px 0px no-repeat;
     background-size: var(--width) var(--height);
 }
+
+/* elements canvas personalizado */
+/* Os valores de posição e tamanho do canvas devem ser passados manualmente */
+#logo2 {
+    width: 65px;
+    height: 59px;
+    background: url(../images/logo2.png) 0px 0px no-repeat;
+    opacity: 0;
+    position: absolute;
+    /* posicionamento manual */
+    top: 180px;
+    left: 19px;
+}
+
 
 .default {
     top: 0 !important;

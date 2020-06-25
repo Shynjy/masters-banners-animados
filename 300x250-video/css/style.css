@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* @import url('./animation.css'); */
+
+
+/* reset */
+
+html,
+body,
+object,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+:root {
+    /* altera largura do banner */
+    --width: 300px;
+    /* altera altura do banner */
+    --height: 250px;
+    /* altera com da borda do banner */
+    --borderColor: rgba(0, 0, 0, 1);
+    --colorOverlay: #003c71;
+    /*  */
+    /*  */
+    /* Transition */
+    /* largura negativa */
+    --left: -300px;
+    --up: 50px;
+}
+
+
+/* structure */
+
+#content {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    overflow: hidden;
+}
+
+#fade {
+    position: absolute;
+    display: block;
+    width: var(--width);
+    height: var(--height);
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 980;
+}
+
+#border {
+    position: absolute;
+    display: block;
+    width: calc(var(--width) - 2px);
+    height: calc(var(--height) - 2px);
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--borderColor);
+    opacity: 1;
+    z-index: 990;
+}
+
+
+/* elements */
+
+#logo,
+#copy1,
+#copy2,
+#copy3,
+#cta,
+#overlay {
+    width: var(--width);
+    height: var(--height);
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    background: url(../images/logo.png) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#copy1 {
+    background: url(../images/copy1.png) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#copy2 {
+    background: url(../images/copy2.png) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#copy3 {
+    background: url(../images/copy3.png) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#cta {
+    background: url(../images/cta.png) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#overlay {
+    background-color: var(--colorOverlay);
+}
+
+#bg1,
+#bg2,
+#bg3 {
+    width: var(--width);
+    height: var(--height);
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -ms-transform: scale(1);
+    /* IE 9 */
+    transform: scale(1);
+    /* Standard syntax */
+}
+
+#bg1 {
+    background: url(../images/bg1.jpg) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#bg2 {
+    background: url(../images/bg2.jpg) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#bg3 {
+    background: url(../images/bg3.jpg) 0px 0px no-repeat;
+    background-size: var(--width) var(--height);
+}
+
+#replay {
+    cursor: pointer !important;
+    display: none;
+    position: absolute;
+    float: right;
+    opacity: 0.8;
+    width: 25px;
+    height: 26px;
+    top: 8px;
+    right: 8px;
+    z-index: 9999;
+    background: url(../images/replay.svg) 0px 0px no-repeat;
+    transform: rotate(0deg);
+}
+
+#replay:hover {
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    animation: replay 1s forwards;
+    animation-direction: alternate;
+    -webkit-animation: replay 1s forwards;
+    -webkit-animation-direction: alternate;
+    -moz-animation: replay 1s forwards;
+    -moz-animation-direction: alternate;
+}
+
+a.click-through {
+    cursor: pointer !important;
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 998;
+    background: #ffffff;
+}
+
+
+/* botão do hover
+sempre arrumar o local do botão */
+
+#legal-open {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 100px;
+    left: 100px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 999;
+    display: none;
+}
+
+
+/* visibility */
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+/* fades */
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+.fade-half {
+    opacity: 0.5 !important;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+.fade-overlay {
+    opacity: 0.8 !important;
+}
+
+@keyframes replay {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        ;
+    }
+    100% {
+        transform: rotate(0deg);
+        ;
+    }
+}

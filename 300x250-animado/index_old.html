@@ -13,15 +13,33 @@
 
     <!-- code sizmek init-->
 
-    <!-- <script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script> -->
+    <!-- <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script> -->
 
     <!-- code sizmek end-->
 </head>
 
 <body onload="init()">
+    <!-- code sizmek init-->
 
-<!-- code sizmek init-->
-<!-- <a href="#" onclick="EB.clickthrough();return false;"> -->
+    <!-- <script type="text/javascript">
+		function checkInit() {
+			if (!EB.isInitialized()) {
+				EB.addEventListener(EBG.EventName.EB_INITIALIZED, onInit); // This code checks whether the EB object is initialized, if the object is initialized, it launches the function "onInit", otherwise it registers to the "EB_INITIALIZED" event.
+			} else {
+				onInit()
+			}
+		}
+
+		function onInit() {
+			// --- ATENÇÃO ---
+			// Insira aqui a função que inicializa a animação
+			init()
+		}
+
+		window.onload = function () { checkInit(); };
+	</script> -->
+
+    <!-- code sizmek end-->
 
     <div id="content">
         <div class="animClass">
@@ -49,13 +67,15 @@
             <!-- <div id="legal-open"></div> -->
             <div id="legal-clickthrough"></div>
 
-            <!-- Clicktag default -->
             <!-- <a id="btn" class="click-through" href="javascript:window.open(window.clickTag, '_blank'); void(0)"></a>​ -->
-
         </div>
+        <!-- #content -->
 
-<!-- </a> -->
-<!-- code sizmek end-->
+        <!-- code sizmek place of click-->
+
+        <!-- <div id="banner" onclick="EB.clickthrough();" style="cursor:pointer;"></div> -->
+
+        <!-- code sizmek place of click-->
 
         <script type="text/javascript" src="scripts.js"></script>
 </body>

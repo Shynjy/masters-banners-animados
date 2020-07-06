@@ -73,9 +73,12 @@ function allAnimations() {
             logo2.setAttribute('class', 'transition-1 fade-out');
         } else if (animCount == second(0.5)) {
             cta.setAttribute('class', 'transition-txt-in fade-in');
-        } else if (animCount == second(0) + 4) {
+        } else if (animCount == second(0) + 10) {
             clearInterval(animTimer);
             console.log(contTimer(animCount))
+
+            // ativa looping
+            initBanner()
         }
         animCount++;
     }
@@ -94,4 +97,11 @@ function allAnimations() {
     // 	 legal1.setAttribute('class', 'transition-5');
     // 	 overlay.setAttribute('class', 'transition-5');
     //  }
+
+    initBanner = () => {
+        allAnimations()
+        bg3.setAttribute('class', 'transition-1 fade-out');
+        copy3.setAttribute('class', 'transition-1 fade-out');
+        cta.setAttribute('class', 'transition-1 fade-out');
+    }
 }

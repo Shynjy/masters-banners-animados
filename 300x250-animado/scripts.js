@@ -73,7 +73,7 @@ function allAnimations() {
             logo2.setAttribute('class', 'transition-1 fade-out');
         } else if (animCount == second(0.5)) {
             cta.setAttribute('class', 'transition-txt-in fade-in');
-        } else if (animCount == second(0) + 10) {
+        } else if (animCount == second(2)) { // alterar o tempo para o  tempo de looping
             clearInterval(animTimer);
             console.log(contTimer(animCount))
 

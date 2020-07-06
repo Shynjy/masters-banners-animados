@@ -5,6 +5,7 @@ Banner animado:
 * 6s
 * fade de entrada
 * animações simples
+* adicionado looping
 
 
 ## 300x250 video

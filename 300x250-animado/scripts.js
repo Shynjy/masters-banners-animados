@@ -1,13 +1,15 @@
-init = function() {
-    setTimeout(function() {
+init = function () {
+    setTimeout(function () {
         allAnimations();
     }, 200);
 }
 
+let cont = 0;
+
 function allAnimations() {
     var setTimer = 250;
     var animCount = 0;
-    var animTimer = setInterval(function() { theTimer() }, setTimer),
+    var animTimer = setInterval(function () { theTimer() }, setTimer),
 
         fade = document.getElementById('fade'),
 
@@ -73,7 +75,7 @@ function allAnimations() {
             logo2.setAttribute('class', 'transition-1 fade-out');
         } else if (animCount == second(0.5)) {
             cta.setAttribute('class', 'transition-txt-in fade-in');
-        } else if (animCount == second(2)) { // alterar o tempo para o  tempo de looping
+        } else if (animCount == second(2)) { // alterar o tempo para o looping
             clearInterval(animTimer);
             console.log(contTimer(animCount))
 
@@ -99,9 +101,17 @@ function allAnimations() {
     //  }
 
     initBanner = () => {
-        allAnimations()
-        bg3.setAttribute('class', 'transition-1 fade-out');
-        copy3.setAttribute('class', 'transition-1 fade-out');
-        cta.setAttribute('class', 'transition-1 fade-out');
+        if (cont < 2) {
+
+            allAnimations()
+            
+            bg3.setAttribute('class', 'transition-1 fade-out');
+            copy3.setAttribute('class', 'transition-1 fade-out');
+            cta.setAttribute('class', 'transition-1 fade-out');
+
+            cont++
+        } else {
+            return
+        }
     }
 }

@@ -59,7 +59,7 @@ function allAnimations() {
             fade.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {
             copy1.setAttribute('class', 'transition-2 fade-in');
-            logo2.setAttribute('class', 'transition-txt fade-in');
+            logo2.setAttribute('class', 'transition-txt-2 fade-in');
         } else if (animCount == second(2.25)) {
             copy1.setAttribute('class', 'transition-2 fade-out');
         } else if (animCount == second(0.25)) {

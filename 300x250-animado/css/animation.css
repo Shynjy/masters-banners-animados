@@ -6,11 +6,18 @@
 
 /* transitions */
 
-.transition-txt {
+.transition-txt-1 {
     -webkit-transition: all 1s cubic-bezier(.25,.46,.45,.94);
     -ms-transition: all 1s cubic-bezier(.25,.46,.45,.94);
     -moz-transition: all 1s cubic-bezier(.25,.46,.45,.94);
     transition: all 1s cubic-bezier(.25,.46,.45,.94);
+}
+
+.transition-txt-2 {
+    --webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 
@@ -105,9 +112,12 @@
 }
 
 .txt-mini {
-    -webkit-transform: translate(0,0) scale(.01);
-    transform: translate(0,0) scale(.01);
+    transform: translate3d(0, 0, 0) scale(.01);
+    -webkit-transform: translate3d(0, 0, 0) scale(.01);
+    -ms-transform: translate3d(0, 0, 0) scale(.01);
+    -moz-transform: translate3d(0, 0, 0) scale(.01);
 }
+
 /* animations */
 
 .animClass {

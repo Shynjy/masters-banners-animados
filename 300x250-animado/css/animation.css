@@ -6,6 +6,24 @@
 
 /* transitions */
 
+<<<<<<< HEAD
+=======
+.transition-txt-1 {
+    -webkit-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    -ms-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    -moz-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    transition: all 1s cubic-bezier(.25,.46,.45,.94);
+}
+
+.transition-txt-2 {
+    --webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
 .transition-1 {
     -webkit-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -41,13 +59,36 @@
     transition: all 1s ease-out;
 }
 
+<<<<<<< HEAD
 .transition-off {
+=======
+.transition-6 {
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
     -webkit-transition: all 1.5s ease-out;
     -ms-transition: all 1.5s ease-out;
     -moz-transition: all 1.5s ease-out;
     transition: all 1.5s ease-out;
 }
 
+<<<<<<< HEAD
+=======
+.transition-7 {
+    -webkit-transition: all 2s ease-out;
+    -ms-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+}
+
+.transition-txt-in{
+	transform:
+		perspective(100px)
+		translate3d(0px,0px,0px)
+		scale3d(1, 1, 1)
+		rotate3d(0, 1, 0, 0deg)
+		skewX(0deg) skewY(0deg);
+	transition: all 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);	
+}
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
 
 /* functions */
 
@@ -75,6 +116,20 @@
     transform: translate(0px, var(--up)) rotate(0.01deg) !important;
 }
 
+<<<<<<< HEAD
+=======
+.txt-up {
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+
+.txt-mini {
+    transform: translate3d(0, 0, 0) scale(.01);
+    -webkit-transform: translate3d(0, 0, 0) scale(.01);
+    -ms-transform: translate3d(0, 0, 0) scale(.01);
+    -moz-transform: translate3d(0, 0, 0) scale(.01);
+}
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
 
 /* animations */
 
@@ -83,7 +138,10 @@
     /* Force Hardware Acceleration */
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
 /* Scale */
 
 .scale-1 {
@@ -101,6 +159,19 @@
     -moz-animation-fill-mode: forwards;
 }
 
+<<<<<<< HEAD
+=======
+.transition-txt-scale {
+    -webkit-transform: scale3d(1.2,1.2,1);
+    transform: scale3d(1.2,1.2,1);
+}
+
+.bg-scale {
+    -webkit-transform: scale3d(1.1,1.1,1) !important;
+    transform: scale3d(1.1,1.1,1) !important;
+}
+
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
 @keyframes scale-1 {
     0% {
         transform: scale(1);

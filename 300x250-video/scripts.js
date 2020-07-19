@@ -44,7 +44,11 @@ function allAnimations() {
             fade.setAttribute('class', 'transition-3 fade-out');
         } else if (animCount == second(6)) {
 
+<<<<<<< HEAD
         } else if (animCount == second(0) + 4) {
+=======
+        } else if (animCount == second(0)) {
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
             clearInterval(animTimer);
             console.log(contTimer(animCount))
         }

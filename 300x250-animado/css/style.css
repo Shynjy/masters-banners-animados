@@ -216,7 +216,7 @@ sempre arrumar o local do botão */
 }
 
 .hide {
-    display: block !important;
+    display: none !important;
 }
 
 

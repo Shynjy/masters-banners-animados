@@ -22,9 +22,15 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
+<<<<<<< HEAD
+                    'style-loader',
+                    'css-loader'
+                ]
+=======
                     'css-loader',
                     'style-loader' 
                 ],
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
             },
             {
                 test: /\.js$/,
@@ -35,6 +41,8 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+<<<<<<< HEAD
+=======
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -43,6 +51,7 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'images'
                 }
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
             }
         ]
     },

@@ -142,6 +142,8 @@
     -moz-animation-fill-mode: forwards;
 }
 
+<<<<<<< HEAD
+=======
 .transition-txt-scale {
     -webkit-transform: scale3d(1.2,1.2,1);
     transform: scale3d(1.2,1.2,1);
@@ -152,6 +154,7 @@
     transform: scale3d(1.1,1.1,1) !important;
 }
 
+<<<<<<< HEAD
 /* Brilho */
 #content-brilho {
     display: none;
@@ -184,6 +187,9 @@
     }
 }
 
+=======
+>>>>>>> 7787ca1954b1b94442ec2e6654f217d087ec434b
+>>>>>>> e1fe6fcd78d39730e3d635b9c65d503288b4e9cc
 @keyframes scale-1 {
     0% {
         transform: scale(1);

@@ -34,6 +34,12 @@ img {
     /* largura negativa */
     --left: -300px;
     --up: 50px;
+    /* Brilho cta */
+    --contBrilhoW: 96px;
+    --contBrilhoH: 27px;
+    --brilhoTop: 128px;
+    --brilhoLeft: 188px;
+    --startBrilho: -100px;
 }
 
 

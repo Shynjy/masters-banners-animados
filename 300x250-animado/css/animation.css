@@ -20,6 +20,17 @@
     transition: all 0.5s linear;
 }
 
+.transition-txt-3{
+	-webkit-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out ;
+	transition: all 0.5s ease-out ;
+		
+	-webkit-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+	-ms-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.083);
+	-moz-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+	transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+}
 
 .transition-1 {
     -webkit-transition: all 0.2s ease-out;

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="ad.size" content="width=300,height=250">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+
+        img {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* altera largura do banner */
+            --width: 300px;
+            /* altera altura do banner */
+            --height: 250px;
+            /* altera com da borda do banner */
+            --borderColor: rgba(0, 0, 0, 1);
+        }
+
+        #content {
+            position: relative;
+            width: var(--width);
+            height: var(--height);
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        #border {
+            position: absolute;
+            display: block;
+            width: var(--width);
+            height: var(--height);
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            border: 1px;
+            border-style: solid;
+            border-color: var(--borderColor);
+            opacity: 1;
+            z-index: 990;
+        }
+
+        #gif {
+            display: block;
+            position: absolute;
+            width: var(--width);
+            height: var(--height);
+            top: 0;
+            left: 0;
+            background: url('./images/62019660-VASELINE-Hand-Sanitizer-300x250.gif') 0px 0px no-repeat;
+            background-size: var(--width) var(--height);
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+
+        a.click-through {
+            cursor: pointer !important;
+            position: absolute;
+            width: var(--width);
+            height: var(--height);
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            z-index: 998;
+            background: #ffffff;
+        }
+    </style>
+
+    <script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>
+
+</head>
+
+<body>
+
+    <a href="#" onclick="EB.clickthrough();return false;">
+
+        <div id="content">
+            <div id="gif" draggable="false"></div>
+        </div>
+
+        <div id="border"></div>
+
+    </a>
+
+</body>
+
+</html>

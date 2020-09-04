@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import url('./animation.css');
+
+/* @import url('./animation.css'); */
+
 
 /* reset */
 
@@ -26,7 +28,7 @@ img {
     /* altera altura do banner */
     --height: 250px;
     /* altera com da borda do banner */
-    --borderColor: rgba(0, 0, 0, 1);
+    --borderColor: #e8e8e8;
     --colorOverlay: #003c71;
     /*  */
     /*  */
@@ -34,12 +36,6 @@ img {
     /* largura negativa */
     --left: -300px;
     --up: 50px;
-    /* Brilho cta */
-    --contBrilhoW: 96px;
-    --contBrilhoH: 27px;
-    --brilhoTop: 128px;
-    --brilhoLeft: 188px;
-    --startBrilho: -100px;
 }
 
 
@@ -83,53 +79,7 @@ img {
 
 /* elements */
 
-#logo,
-#copy1,
-#copy2,
-#copy3,
-#cta,
-#overlay {
-    width: var(--width);
-    height: var(--height);
-    display: block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#logo {
-    background: url(../images/logo.png) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#copy1 {
-    background: url(../images/copy1.png) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#copy2 {
-    background: url(../images/copy2.png) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#copy3 {
-    background: url(../images/copy3.png) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#cta {
-    background: url(../images/cta.png) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#overlay {
-    background-color: var(--colorOverlay);
-}
-
-#bg1,
-#bg2,
-#bg3 {
+#bg {
     width: var(--width);
     height: var(--height);
     display: block;
@@ -138,53 +88,86 @@ img {
     top: 0;
     left: 0;
     -ms-transform: scale(1);
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    -o-transform: scale(1);
     /* IE 9 */
     transform: scale(1);
     /* Standard syntax */
 }
 
-#bg1 {
+#bg {
     background: url(../images/bg1.jpg) 0px 0px no-repeat;
     background-size: var(--width) var(--height);
 }
 
-#bg2 {
-    background: url(../images/bg2.jpg) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-#bg3 {
-    background: url(../images/bg3.jpg) 0px 0px no-repeat;
-    background-size: var(--width) var(--height);
-}
-
-/* elements canvas personalizado */
-/* Os valores de posição e tamanho do canvas devem ser passados manualmente */
-#logo2 {
-    width: 65px;
-    height: 59px;
-    background: url(../images/logo2.png) 0px 0px no-repeat;
-    opacity: 0;
+#replay {
+    cursor: pointer !important;
+    display: none;
     position: absolute;
-    /* posicionamento manual */
-    top: 180px;
-    left: 19px;
+    float: right;
+    opacity: 1.5;
+    width: 30px;
+    height: 30px;
+    bottom: 4px;
+    right: 6px;
+    z-index: 9999;
+    background: url(../images/replay.png) 0px 0px no-repeat;
+    background-size: 30px 30px;
+    transform: rotate(0deg);
 }
 
+#controls {
+    cursor: pointer !important;
+    display: block;
+    position: absolute;
+    float: right;
+    opacity: 1.5;
+    width: 30px;
+    height: 30px;
+    bottom: 4px;
+    right: 6px;
+    z-index: 9999;
+    background: url(../images/controls.png) 0px 0px no-repeat;
+    background-size: 30px 60px;
+    background-position-y: 0px;
+    transform: rotate(0deg);
+}
 
-.default {
-    top: 0 !important;
-    left: 0 !important;
-    -ms-transform: scale(1) !important;
-    /* IE 9 */
-    transform: scale(1) !important;
-    /* Standard syntax */
-    -ms-transform: translate3d(0, 0, 0) !important;
-    transform: translate3d(0, 0, 0) !important;
-    /* Force Hardware Acceleration */
+#controls.pause{
+	background-position-y: -30px;
+}
+
+#mute {
+    cursor: pointer !important;
+    display: block;
+    position: absolute;
+    float: right;
+    opacity: 1.5;
+    width: 30px;
+    height: 30px;
+    bottom: 4px;
+    right: 32px;
+    z-index: 9999;
+    background: url(../images/mute.png) 0px 0px no-repeat;
+    background-size: 30px 60px;
+    background-position-y: 0px;
+    transform: rotate(0deg);
+}
+
+#mute.unmute{
+	background-position-y: -30px;
+}
+
+#replay:hover {
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.8;
+    animation: replay 1s forwards;
+    animation-direction: alternate;
+    -webkit-animation: replay 1s forwards;
+    -webkit-animation-direction: alternate;
+    -moz-animation: replay 1s forwards;
+    -moz-animation-direction: alternate;
 }
 
 a.click-through {
@@ -243,4 +226,18 @@ sempre arrumar o local do botão */
 
 .fade-overlay {
     opacity: 0.8 !important;
+}
+
+@keyframes replay {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        ;
+    }
+    100% {
+        transform: rotate(0deg);
+        ;
+    }
 }

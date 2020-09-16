@@ -30,7 +30,7 @@
             /* altera altura do banner */
             --height: 250px;
             /* altera com da borda do banner */
-            --borderColor: rgba(0, 0, 0, 1);
+            --borderColor: rgba(0, 0, 0, 0.8);
         }
 
         #content {
@@ -63,9 +63,6 @@
             height: var(--height);
             top: 0;
             left: 0;
-            background: url('./images/62019660-VASELINE-Hand-Sanitizer-300x250.gif') 0px 0px no-repeat;
-            background-size: var(--width) var(--height);
-            user-drag: none;
             user-select: none;
             -moz-user-select: none;
             -webkit-user-drag: none;
@@ -96,13 +93,24 @@
     <a href="#" onclick="EB.clickthrough();return false;">
 
         <div id="content">
-            <div id="gif" draggable="false"></div>
+            <img id="gif" draggable="false" src="./images/62019660-VASELINE-Hand-Sanitizer-300x250.gif" alt="gif">
         </div>
 
         <div id="border"></div>
 
     </a>
 
+    <script>
+        function getImgSize(image) {
+            return {
+                width: image.naturalWidth,
+                height: image.naturalHeight
+            }
+        }
+
+        const img = document.querySelector('img');
+        const size = getImgSize(img);
+    </script>
 </body>
 
 </html>

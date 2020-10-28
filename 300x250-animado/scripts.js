@@ -56,25 +56,25 @@ function allAnimations() {
 
             bg1.setAttribute('class', 'fade-in');
             bg1.setAttribute('class', 'fade-in scale-1');
-            fade.setAttribute('class', 'transition-2 fade-out');
+            fade.setAttribute('class', 'transition-2 temp05 fade-out');
         } else if (animCount == second(0.25)) {
-            copy1.setAttribute('class', 'transition-2 fade-in');
-            logo2.setAttribute('class', 'transition-txt-2 fade-in');
+            copy1.setAttribute('class', 'transition-txt-3 temp05 fade-in');
+            logo2.setAttribute('class', 'transition-txt-2 temp05 fade-in');
         } else if (animCount == second(2.25)) {
-            copy1.setAttribute('class', 'transition-2 fade-out');
+            copy1.setAttribute('class', 'transition-2 temp02 fade-out');
         } else if (animCount == second(0.25)) {
             bg2.setAttribute('class', 'fade-in scale-1');
-            bg1.setAttribute('class', 'transition-6 fade-off scale-1');
-            copy2.setAttribute('class', 'transition-7 fade-in');
+            bg1.setAttribute('class', 'transition-2 temp15 fade-off scale-1');
+            copy2.setAttribute('class', 'transition-2 temp15 fade-in');
         } else if (animCount == second(2.25)) {
-            copy2.setAttribute('class', 'transition-2 fade-out');
+            copy2.setAttribute('class', 'transition-2 temp02 fade-out');
         } else if (animCount == second(0.25)) {
             bg3.setAttribute('class', 'fade-in scale-1');
-            bg2.setAttribute('class', 'transition-6 fade-off scale-1');
-            copy3.setAttribute('class', 'transition-1 fade-in');
-            logo2.setAttribute('class', 'transition-1 fade-out');
+            bg2.setAttribute('class', 'transition-2 temp15 fade-off scale-1');
+            copy3.setAttribute('class', 'transition-txt-2 temp05 fade-in');
+            logo2.setAttribute('class', 'transition-2 temp02 fade-out');
         } else if (animCount == second(0.5)) {
-            cta.setAttribute('class', 'transition-txt-in fade-in');
+            cta.setAttribute('class', 'transition-txt-in temp05 fade-in');
         } else if (animCount == second(2)) { // alterar o tempo para o looping
             clearInterval(animTimer);
             console.log(contTimer(animCount))
@@ -105,9 +105,11 @@ function allAnimations() {
 
             allAnimations()
             
-            bg3.setAttribute('class', 'transition-1 fade-out');
-            copy3.setAttribute('class', 'transition-1 fade-out');
-            cta.setAttribute('class', 'transition-1 fade-out');
+            bg1.setAttribute('class', 'default');
+            bg2.setAttribute('class', 'default');
+            bg3.setAttribute('class', 'transition-2 temp02 fade-out');
+            copy3.setAttribute('class', 'transition-2 temp02 fade-out');
+            cta.setAttribute('class', 'transition-2 temp02 fade-out');
 
             cont++
         } else {

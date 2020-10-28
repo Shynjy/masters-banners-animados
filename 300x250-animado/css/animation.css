@@ -7,78 +7,67 @@
 /* transitions */
 
 .transition-txt-1 {
-    -webkit-transition: all 1s cubic-bezier(.25,.46,.45,.94);
-    -ms-transition: all 1s cubic-bezier(.25,.46,.45,.94);
-    -moz-transition: all 1s cubic-bezier(.25,.46,.45,.94);
-    transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    -webkit-transition: all ease-in;
+	-ms-transition: all ease-out;
+	-moz-transition: all ease-out;
+    transition: all ease-out ;
+    
+    -webkit-transition: all cubic-bezier(.25,.46,.45,.94);
+    -ms-transition: all cubic-bezier(.25,.46,.45,.94);
+    -moz-transition: all cubic-bezier(.25,.46,.45,.94);
+    transition: all cubic-bezier(.25,.46,.45,.94);
 }
 
-.transition-txt-2 {
-    --webkit-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+.transition-txt-2{
+	-webkit-transition: all ease-in;
+	-ms-transition: all ease-out;
+	-moz-transition: all ease-out;
+	transition: all ease-out ;
+		
+	-webkit-transition: all cubic-bezier(.27,1.04,.46,1.08);
+	-ms-transition: all cubic-bezier(.27,1.04,.46,1.083);
+	-moz-transition: all cubic-bezier(.27,1.04,.46,1.08);
+	transition: all cubic-bezier(.27,1.04,.46,1.08);
 }
 
 .transition-txt-3{
-	-webkit-transition: all 0.5s ease-in;
-	-ms-transition: all 0.5s ease-out;
-	-moz-transition: all 0.5s ease-out ;
-	transition: all 0.5s ease-out ;
+	-webkit-transition: all ease-in;
+	-ms-transition: all ease-out;
+	-moz-transition: all ease-out;
+	transition: all ease-out ;
 		
-	-webkit-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
-	-ms-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.083);
-	-moz-transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
-	transition: all 0.5s cubic-bezier(.27,1.04,.46,1.08);
+	-webkit-transition: all cubic-bezier(.6,1.63,.48,.82);
+	-ms-transition: all cubic-bezier(.6,1.63,.48,.823);
+	-moz-transition: all cubic-bezier(.6,1.63,.48,.82);
+	transition: all cubic-bezier(.6,1.63,.48,.82);
 }
 
 .transition-1 {
-    -webkit-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    --webkit-transition: all linear;
+    -ms-transition: all linear;
+    -moz-transition: all linear;
+    transition: all linear;
 }
 
 .transition-2 {
-    -webkit-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+    -webkit-transition: all ease-out;
+    -ms-transition: all ease-out;
+    -moz-transition: all ease-out;
+    transition: all ease-out;
 }
 
 .transition-3 {
-    -webkit-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all ease-in;
+    -ms-transition: all ease-in;
+    -moz-transition: all ease-in;
+    transition: all ease-in;
 }
 
 .transition-4 {
-    -webkit-transition: all 0.8s ease-out;
-    -ms-transition: all 0.8s ease-out;
-    -moz-transition: all 0.8s ease-out;
-    transition: all 0.8s ease-out;
-}
-
-.transition-5 {
-    -webkit-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-}
-
-.transition-6 {
-    -webkit-transition: all 1.5s ease-out;
-    -ms-transition: all 1.5s ease-out;
-    -moz-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
-}
-
-.transition-7 {
-    -webkit-transition: all 2s ease-out;
-    -ms-transition: all 2s ease-out;
-    -moz-transition: all 2s ease-out;
-    transition: all 2s ease-out;
+    -webkit-transition: all ease-in-out;
+    -ms-transition: all ease-in-out;
+    -moz-transition: all ease-in-out;
+    transition: all ease-in-out;
 }
 
 .transition-txt-in{
@@ -88,7 +77,44 @@
 		scale3d(1, 1, 1)
 		rotate3d(0, 1, 0, 0deg)
 		skewX(0deg) skewY(0deg);
-	transition: all 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);	
+	transition: all cubic-bezier(0.390, 0.575, 0.565, 1.000);	
+}
+
+/* Tempo de Transição */
+.temp02 {
+    transition-duration: 0.2s;
+}
+
+.temp05 {
+    transition-duration: 0.5s;
+}
+
+.temp1 {
+    transition-duration: 1s;
+}
+
+.temp15 {
+    transition-duration: 1.5s;
+}
+
+.temp2 {
+    transition-duration: 2s;
+}
+
+.temp25 {
+    transition-duration: 2.5s;
+}
+
+.temp3 {
+    transition-duration: 3s;
+}
+
+.temp4 {
+    transition-duration: 4s;
+}
+
+.temp5 {
+    transition-duration: 5s;
 }
 
 /* functions */

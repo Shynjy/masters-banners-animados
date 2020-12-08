@@ -6,16 +6,17 @@ init = function () {
 
 function allAnimations() {
     // O setInterval configurado em 1ms
-    var setTimer = 100;
+    let setTimer = 100;
 
-    var startVideo = false;
+    // variáveis de condição
+    let startVideo = false;
     let EndedVideo = false;
 
     // Repetidor da função theTimer
-    var animTimer = setInterval(function () { theTimer() }, setTimer);
+    // let animTimer = setInterval(function () { theTimer() }, setTimer);
 
     // Elementos da DOM
-    var fade = document.getElementById('fade'),
+    let fade = document.getElementById('fade'),
         replay = document.getElementById('replay'),
         video = document.getElementById('video');
 
@@ -28,25 +29,30 @@ function allAnimations() {
         replay.setAttribute('class', 'hide');
         allAnimations()
     }
+    
+    theTimer()
 
     // Escuta o final do video
     video.onended = () => {
         EndedVideo = true;
+        theTimer()
     };
 
     // Listener
     function theTimer() {
 
+        // Inicia o video
         if (!startVideo) {
             video.play()
             fade.setAttribute('class', 'transition temp02 fade-out');
             startVideo = true;
         }
 
+        // habilita o botão replay no final do video
         if (EndedVideo) {
             replay.setAttribute('class', 'transition temp02 show');
             startVideo = false;
-            clearInterval(animTimer);
+            // clearInterval(animTimer);
         }
     }
 }

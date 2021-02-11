@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="ad.size" content="width=320,height=50">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALTERAR FORMATO E COR DE BORDA -->
+    <style>
+        @charset "UTF-8";
+        :root {
+            /* altera largura do banner */
+            --width: 320px;
+            /* altera altura do banner */
+            --height: 50px;
+            /* altera cor da borda do banner */
+            --borderColor: rgba(0, 0, 0, 1);
+        }
+    </style>
+
+    <style>
+        /* reset */
+
+        html,
+        body,
+        object,
+        img {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+
+        #content {
+            position: relative;
+            width: var(--width);
+            height: var(--height);
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        #border {
+            position: absolute;
+            display: block;
+            width: calc(var(--width));
+            height: calc(var(--height));
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            border: 1px;
+            border-style: solid;
+            border-color: var(--borderColor);
+            opacity: 1;
+            z-index: 990;
+            box-sizing: border-box;
+        }
+
+        #arte {
+            width: var(--width);
+            height: var(--height);
+            display: block;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #arte {
+            background: url(images/banner-320x50-2X.jpg) 0px 0px no-repeat;
+            background-size: var(--width) var(--height);
+        }
+
+        a.click-through {
+            cursor: pointer !important;
+            position: absolute;
+            width: var(--width);
+            height: var(--height);
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            z-index: 998;
+            background: #ffffff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content">
+        <div id="arte"></div>
+        <div id="border"></div>
+        <!-- Clicktag default -->
+        <!-- <a id="btn" class="click-through" href="javascript:window.open(window.clickTag, '_blank'); void(0)"></a>​ -->
+    </div>
+    <script type="text/javascript">
+        var clickTag = "https://www.google.com.br";
+    </script>
+</body>
+
+</html>

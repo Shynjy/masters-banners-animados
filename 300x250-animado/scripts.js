@@ -24,6 +24,8 @@ function allAnimations() {
         copy2 = document.getElementById('copy2'),
         copy3 = document.getElementById('copy3'),
 
+        // brilho = document.getElementById('content-brilho'),
+
         // overlay = document.getElementById('overlay'),
         // legal1 = document.getElementById('legal1'),
 
@@ -75,12 +77,13 @@ function allAnimations() {
             logo2.setAttribute('class', 'transition-2 temp02 fade-out');
         } else if (animCount == second(0.5)) {
             cta.setAttribute('class', 'transition-txt-in temp05 fade-in');
+            // brilho.setAttribute('class', 'show');
         } else if (animCount == second(2)) { // alterar o tempo para o looping
             clearInterval(animTimer);
             console.log(contTimer(animCount))
 
             // ativa looping
-            initBanner()
+            // initBanner();
         }
         animCount++;
     }
